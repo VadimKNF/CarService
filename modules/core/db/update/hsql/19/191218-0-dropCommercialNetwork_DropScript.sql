@@ -1,0 +1,1 @@
+drop table CARSERVICE_COMMERCIAL_NETWORK__U90067 if exists cascade ;
