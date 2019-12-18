@@ -4,5 +4,7 @@
 
         <class>com.company.carservice.entity.CommercialNetwork</class>
         <class>com.company.carservice.entity.Shop</class>
+        <class>com.company.carservice.entity.Vendor</class>
+        <class>com.company.carservice.entity.Product</class>
     </persistence-unit>
 </persistence>

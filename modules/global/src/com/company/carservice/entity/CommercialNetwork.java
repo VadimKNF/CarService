@@ -12,24 +12,24 @@ import javax.validation.constraints.NotNull;
 public class CommercialNetwork extends StandardEntity {
     private static final long serialVersionUID = -5078422511726500677L;
     @NotNull
-    @Column(name = "NAME")
-    protected String name;
+    @Column(name = "NETWORK_NAME")
+    protected String networkName;
 
-    @NotNull
-    @Column(name = "FULL_NAME")
-    protected String fullName;
 
-    public void setName(String name){
-        this.name = name;
+    @Column(name = "NETWORK_FULL_NAME")
+    protected String networkFullName;
+
+    public void setNetworkName(String networkName){
+        this.networkName = networkName;
     }
-    public void setFullName(String fullName){
-        this.fullName = fullName;
+    public void setNetworkFullName(String networkFullName){
+        this.networkFullName= networkFullName;
     }
 
-    public String getName(){
-        return name;
+    public String getNetworkName(){
+        return networkName;
     }
-    public String getFullName(){
-        return fullName;
+    public String getnetworkFullName(){
+        return networkFullName;
     }
 }
