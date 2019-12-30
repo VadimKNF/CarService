@@ -9,19 +9,19 @@
                   view="_local">
             <loader/>
         </instance>
-        <collection id="networkDc" class="com.company.carservice.entity.CommercialNetwork" view ="_minimal">
-                <loader id="networkDl">
-                    <query>
-                        select e from carservice_CommercialNetwork e
-                    </query>
-                </loader>
+        <collection id="networkDc" class="com.company.carservice.entity.CommercialNetwork" view="_minimal">
+            <loader id="networkDl">
+                <query>
+                    select e from carservice_CommercialNetwork e
+                </query>
+            </loader>
         </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="editActions" spacing="true">
         <tabSheet>
-            <tab id="mainTab" caption="test">
+            <tab id="mainTab" caption="test" margin="true" spacing="true">
                 <form id="form" dataContainer="shopDc">
                     <column width="250px">
                         <textField id="numberField" property="number"/>

@@ -9,6 +9,11 @@
                   view="_local">
             <loader/>
         </instance>
+        <collection id="vendorDc" class="com.company.carservice.entity.Vendor" view="_local">
+            <loader id="vendorDl">
+                <query><![CDATA[select e from carservice_Vendor e]]></query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -17,6 +22,7 @@
             <column width="250px">
                 <textField id="productNameField" property="name"/>
                 <textField id="vendorPriceField" property="vendorPrice"/>
+                <lookupField id="vendor" property="vendor" optionsContainer="vendorDc"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

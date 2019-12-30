@@ -27,7 +27,7 @@ create table CARSERVICE_COMMERCIAL_NETWORK (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    NETWORK_NAME varchar(255),
+    NETWORK_NAME varchar(255) not null,
     NETWORK_FULL_NAME varchar(255),
     --
     primary key (ID)
