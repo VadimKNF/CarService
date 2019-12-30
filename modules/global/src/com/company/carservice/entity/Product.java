@@ -13,7 +13,7 @@ public class Product extends StandardEntity {
 
     @NotNull
     @Column(name = "PRODUCT_NAME", nullable = false)
-    protected String productName;
+    protected String name;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
@@ -24,19 +24,16 @@ public class Product extends StandardEntity {
     @Column(name = "VENDOR_PRICE", nullable = false)
     protected BigDecimal vendorPrice;
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
+    public String getName() { return name; }
 
     public void setVendorPrice(BigDecimal vendorPrice) {
         this.vendorPrice = vendorPrice;
     }
+    public BigDecimal getVendorPrice() { return vendorPrice; }
 
-    public String getProductName() {
-        return productName;
-    }
-
-    public BigDecimal getVendorPrice() {
-        return vendorPrice;
-    }
+    public void setVendor(Vendor vendor) { this.vendor = vendor; }
+    public Vendor getVendor() { return vendor; }
 }

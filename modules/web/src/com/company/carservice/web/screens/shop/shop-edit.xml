@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.carservice.web.screens.shop">
+    <data>
+        <instance id="shopDc"
+                  class="com.company.carservice.entity.Shop"
+                  view="_local">
+            <loader/>
+        </instance>
+        <collection id="networkDc" class="com.company.carservice.entity.CommercialNetwork" view ="_minimal">
+                <loader id="networkDl">
+                    <query>
+                        select e from carservice_CommercialNetwork e
+                    </query>
+                </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <tabSheet>
+            <tab id="mainTab" caption="test">
+                <form id="form" dataContainer="shopDc">
+                    <column width="250px">
+                        <textField id="numberField" property="number"/>
+                        <textField id="nameField" property="name"/>
+                        <lookupField id="network" property="network" optionsContainer="networkDc"/>
+                    </column>
+                </form>
+            </tab>
+        </tabSheet>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

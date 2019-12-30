@@ -16,29 +16,27 @@ public class Shop extends StandardEntity {
 
     @NotNull
     @Column(name = "SHOP_NAME", nullable = false)
-    protected String shopName;
+    protected String name;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "NAME", nullable = false)
+    @JoinColumn(name = "NETWORK_ID", nullable = false)
     CommercialNetwork network;
 
     public void setNumber(String number){
         this.number = number;
     }
-
     public String getNumber(){
         return number;
     }
 
-    public void setShopName(String shopName){
-        this.shopName = shopName;
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
     }
 
-    public String getShopName(){
-        return shopName;
-    }
-
-
-
+    public void setNetwork(CommercialNetwork network) { this.network = network; }
+    public CommercialNetwork getNetwork() { return network; }
 }

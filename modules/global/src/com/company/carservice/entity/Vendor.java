@@ -1,10 +1,9 @@
 package com.company.carservice.entity;
 
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.security.entity.User;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Table(name = "CARSERVICE_VENDOR")
@@ -14,24 +13,29 @@ public class Vendor extends StandardEntity {
 
     @NotNull
     @Column(name = "VENDOR_NAME", nullable = false)
-    protected String vendorName;
+    protected String name;
 
     @Column(name = "VENDOR_FULL_NAME")
-    protected String vendorFullName;
+    protected String fullName;
 
-    public void setVendorName(String vendorName){
-        this.vendorName = vendorName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER")
+    User user;
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
     }
 
-    public String getVendorName(){
-        return vendorName;
+    public void setFullName(String fullName){
+        this.fullName = fullName;
+    }
+    public String getFullName(){
+        return fullName;
     }
 
-    public void setVendorFullName(String vendorFullName){
-        this.vendorFullName = vendorFullName;
-    }
-
-    public String getVendorFullName(){
-        return vendorFullName;
-    }
+    public void setUser(User user){ this.user = user; }
+    public User getUser() { return user; }
 }
