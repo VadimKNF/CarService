@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
 
+    <view entity="carservice_Shop" name="shop-with-network">
+        <property name="network" view="_minimal"/>
+    </view>
+    <view entity="carservice_Vendor" name="vendor-with-user">
+        <property name="user" view="_minimal"/>
+    </view>
+    <view entity="carservice_Product" name="product-with-vendor">
+        <property name="vendor" view="_minimal"/>
+    </view>
 </views>

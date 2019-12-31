@@ -69,3 +69,37 @@ create table CARSERVICE_SHOP (
     primary key (ID)
 )^
 -- end CARSERVICE_SHOP
+-- begin CARSERVICE_PURCHASE
+create table CARSERVICE_PURCHASE (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    SHOP_ID varchar(36) not null,
+    --
+    primary key (ID)
+)^
+-- end CARSERVICE_PURCHASE
+-- begin CARSERVICE_ADDRESS
+create table CARSERVICE_ADDRESS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    CITY varchar(255),
+    STREET varchar(255),
+    HOUSE varchar(255),
+    --
+    primary key (ID)
+)^
+-- end CARSERVICE_ADDRESS
