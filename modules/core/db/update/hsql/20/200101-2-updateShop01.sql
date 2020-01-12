@@ -1,0 +1,2 @@
+alter table CARSERVICE_SHOP add constraint FK_CARSERVICE_SHOP_ON_SHOP foreign key (SHOP_ID) references CARSERVICE_PRODUCT(ID);
+create index IDX_CARSERVICE_SHOP_ON_SHOP on CARSERVICE_SHOP (SHOP_ID);

@@ -8,5 +8,6 @@
         <class>com.company.carservice.entity.Product</class>
         <class>com.company.carservice.entity.Purchase</class>
         <class>com.company.carservice.entity.Address</class>
+        <class>com.company.carservice.entity.PriceHistory</class>
     </persistence-unit>
 </persistence>

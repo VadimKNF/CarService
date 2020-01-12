@@ -1,10 +1,10 @@
 package com.company.carservice.entity;
 
+
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
 
 
 @Table(name = "CARSERVICE_PURCHASE")
@@ -15,11 +15,7 @@ public class Purchase extends StandardEntity {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHOP_ID", nullable = false)
-    Shop shop;
-
-    //protected ArrayList<Product> productsList = new ArrayList<Product>();
-
-    //protected int num;
+    protected Shop shop;
 
     public Shop getShop() {
         return shop;
@@ -29,19 +25,5 @@ public class Purchase extends StandardEntity {
         this.shop = shop;
     }
 
-    /*public int getNum() {
-        return num;
-    }
 
-    public void setNum(int num) {
-        this.num = num;
-    }
-
-    public ArrayList<Product> getProductsList() {
-        return productsList;
-    }
-
-    public void setProductsList(ArrayList<Product> productsList) {
-        this.productsList = productsList;
-    }*/
 }

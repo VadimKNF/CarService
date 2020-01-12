@@ -22,7 +22,7 @@ public class Vendor extends StandardEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER")
-    User user;
+    protected User user;
 
     public void setName(String name) {
         this.name = name;
